@@ -25,10 +25,10 @@ body.fs{overflow:hidden}
 #contentWrapper #content #pageWrapper{width:640px;float:left;-webkit-box-sizing:;-moz-box-sizing:;box-sizing:;-webkit-font-smoothing:antialiased;}
 #contentWrapper #content #pageWrapper > p:first-of-type{font-size:150%;font-family:Georgia,"serif"}
 #contentWrapper #content #pageWrapper img.alignnone,#contentWrapper #content #pageWrapper img.alignleft,#contentWrapper #content #pageWrapper img.alignright{margin:0 0 1em}
-#contentWrapper #content #pageWrapper h2,#contentWrapper #content #pageWrapper .h2{font:200%/1.5 "Helvetica Neue",Arial,Helvetica,sans-serif;display:block;margin-bottom:16px;}
+#contentWrapper #content #pageWrapper h2,#contentWrapper #content #pageWrapper .h2{font:150%/1.5 "Helvetica Neue",Arial,Helvetica,sans-serif;display:block;margin-bottom:16px;}
 #contentWrapper #content #pageWrapper h2 a,#contentWrapper #content #pageWrapper .h2 a{color:#ccc;border-bottom:1px solid transparent;}
 #contentWrapper #content #pageWrapper h2 a:hover,#contentWrapper #content #pageWrapper .h2 a:hover{border-color:anchor}
-#contentWrapper #content #pageWrapper h3{margin-bottom:16px;text-transform:uppercase;letter-spacing:2px;color:#999;font-size:85%}
+#contentWrapper #content #pageWrapper h3{font-weight:bold;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;color:#999;font-size:85%}
 #contentWrapper #content #pageWrapper p,#contentWrapper #content #pageWrapper ul,#contentWrapper #content #pageWrapper ol{margin:0 0 1em}
 #contentWrapper #content #pageWrapper ol li{list-style:decimal}
 #contentWrapper #content #pageWrapper pre,#contentWrapper #content #pageWrapper code{padding:0 0 0 15px;font-family:monospace;font-size:13px}
@@ -51,13 +51,14 @@ body.fs img.preview{position:absolute;left:0;top:0;width:100%}
 #prev{background:#000 url("img/icons/prev.png") no-repeat center center;right:-50px}
 #toggle{width:50px;height:50px;line-height:50px;background:#000 url("img/toggle.png") no-repeat center center;text-align:center;letter-spacing:1px;position:fixed;position:fixed;bottom:25px;left:50%;margin-left:-25px;cursor:pointer;opacity:.7;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);text-indent:-9999px;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;}
 #toggle:hover{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100)}
-.packages{width:960px;margin-bottom:1.5em;}
+.packages{width:960px;margin-bottom:3em;}
 .packages .package{width:319px;display:table-cell;background:#282828;border-right:1px solid rgba(0,0,0,0.3);padding:1.5em 2em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;vertical-align:top;}
-.packages .package:last-of-type{border-right:none}
+.packages .package:last-of-type{border-right:none;width:320px}
 .packages .package h2{margin-bottom:0 !important}
 .packages .package h3{margin-bottom:1.5em}
+.packages .package strong{display:block;line-height:1.5em}
 .packages .package p,.packages .package ul{font-size:85%}
-.packages .package ul li{margin:0 0 .5em}
+.packages .package ul li{margin:0 0 1.5em}
 #content ul.posts{width:640px;float:left;-webkit-box-sizing:;-moz-box-sizing:;box-sizing:;}
 #content ul.posts li.post{margin:0 0 1px;}
 #content ul.posts li.post.excerpt a{display:block;padding:1.75em;background:#282828;-webkit-transition:;-moz-transition:;}
