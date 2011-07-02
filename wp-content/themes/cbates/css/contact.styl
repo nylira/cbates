@@ -1,0 +1,34 @@
+#contact_form
+  ul.fields
+    w 100%
+    li.field
+      m 0 0 1em
+      position relative
+      input[type=text], textarea
+        w 100%
+        bg m40
+        b none
+        font 1em/1 sans
+        c txt
+        p 1em
+        box-sizing border-box
+        m 0
+        display block
+
+      label.error
+        absolute top 0 right -320px
+        lh 3em
+        p 0 1em
+        c #f00
+        ta left
+        w 320px
+        box-sizing border-box
+
+  textarea
+    height 150px
+
+  input[type="submit"]
+    button()
+    s 16px
+    w cw*4
+    p 0

@@ -1,0 +1,93 @@
+#footer
+  bt 3px solid #000
+  width 100%
+  h x*4
+  bg b70
+  top 0
+  position fixed
+  z-index 10
+  a
+    c #aaa
+    &:hover
+      c #fff
+
+  #nav
+    cnt()
+    mt -3px
+
+    a#logo, .menu > ul > li
+      bt 3px solid transparent
+      br 1px solid w9
+      box-sizing border-box
+
+    a#logo
+      col 4
+      h1
+        float left
+        lh x*1.20
+        p x*.9 - 2px 0 x*.9 - 1px
+        c #999
+        tt uppercase
+        ls 2px
+
+        span.name
+          c #fff
+          display block
+
+      &:hover
+        btc link
+
+    .menu
+      col 8
+      f 75% sans
+      > ul
+        > li
+          display inline-block
+          ta right
+          span 2
+          position relative
+          > a
+            display block
+            lh x*1.5
+            p x*2 2em x*.5
+            position relative
+            z-index 300
+
+          &:hover, &.current_page_item
+            btc link
+
+          ul
+            width 160px
+            display none
+            position absolute
+            top x*4
+            left -1px
+            z-index 150
+            bg m40
+
+            li
+              background transparent url(img/trans_bg.png) repeat
+              display block
+              bt 1px solid w10
+              p 0 2em
+              position relative
+              z-index 99999
+              &:last-of-type
+                bb none
+
+              a
+                display block
+                lh x*2
+                position relative
+                z-index 200
+                &:hover
+                  c link
+
+              ul
+                display none
+                position absolute
+                top -1px
+                left 160px
+                z-index 225
+                li
+                  bl 1px solid w10

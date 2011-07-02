@@ -1,0 +1,12 @@
+/* 
+Theme Name: Specere
+Description: Look and you will see.
+Author: iKreativ
+Author URI: http://ikreativ.com
+Version: 1.0
+*/
+
+@import url("css/reset.css") screen;
+@import url("css/typo.css") screen;
+@import url("css/gallery.css") screen;
+@import url("css/global.css") screen;

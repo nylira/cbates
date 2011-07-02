@@ -1,0 +1,1233 @@
+/* 
+Theme Name: Specere
+Description: Look and you will see.
+Author: iKreativ
+Author URI: http://ikreativ.com
+Version: 1.0
+*/
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	1.	Document Setup
+	2.  Logo
+	3.	Main Navigation
+	4.	Main Content Area
+	5.  Header
+	6.	Posts
+	7.	Post Meta
+	8.	Pagination 
+	9.	Comments
+	10.	Sidebar
+	11.	Contact Page
+	12.	Footer
+	13. Extras & Widgets
+	14. Wordpress Default
+	15. Shortcodes
+	// Plugins, Generic Classes, Clearfix and Overrides
+
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Main body styling
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+body {
+	background-color: #0f0f0f;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	}
+	
+body.fs {
+	background-color: #0f0f0f;
+	overflow:hidden;
+	margin: 0;
+	padding: 0;
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Logo
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#logo { 
+	color: #ffffff; 
+	width: 500px; 
+	height: 45px;
+	float: left; 
+	margin: 20px 0 0 15px;
+	position: fixed;
+	z-index: 10;
+	}
+
+#logo a img {
+	float: left;
+	}
+
+#logo a h1 {
+	color: #ffffff;
+	margin: 0;
+	border: none;
+	text-decoration: none;
+	float: left;
+	}
+	
+#logo .slogan {
+	font-size: 12px;
+	font-style: italic;
+	color: #ffffff;
+	margin: 3px 0 0 5px;
+	float: left;
+}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Main Navigation & Drop Menu
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#nav { 
+	padding: 14px 65px 0 0; 
+	float: right; 
+	}
+	
+#nav ul li { 
+	margin: 0 0 0 25px; 
+	padding: 3px 0 5px 0;
+	float: left;
+	}
+	
+#nav ul li a {
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #bbbbbb;
+	position: relative;
+	z-index: 300;
+	}
+
+#nav ul li a:hover {
+	color: #ffffff;
+	}
+	
+#nav ul li.current_page_item a { 
+	color: #ffffff;
+	padding: 0 0 20px 0; 
+	}
+	
+#nav ul li.current_page_item a:hover { 
+	color: #aaaaaa; 
+	}
+
+#nav ul li ul {/* Second level dropdown */
+	width: 140px; 
+	display: none; 
+	position: absolute; 
+	bottom: 21px;
+	margin: 0 0 0 -10px; 
+	padding: 0 0 40px 0; 
+	z-index: 150; 
+	}
+	
+#nav ul li ul li { 
+	width: 125px;
+	background: transparent url(../img/trans_bg.png) repeat;
+	margin: 0 0 1px 0;
+	padding: 5px 5px 5px 10px; 
+	position: relative; 
+	z-index: 99999; 
+	}
+	
+#nav ul li ul li a { 
+	color: #ffffff; 
+	padding: 0; 
+	line-height: 24px; 
+	position: relative; 
+	z-index: 200; 
+	}
+
+#nav ul li ul li ul {/* Third level dropdown */
+	width: 125px; 
+	display: none; 
+	position: absolute; 
+	top: 0; 
+	margin: 0 0 0 100px; 
+	padding: 0; 
+	z-index: 225; 
+	}
+	
+#nav ul li ul li a { 
+	color: #ffffff; 
+	background-color: none; 
+	border: none; 
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Main Content Area
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#contentWrapper {
+	width: 900px;
+	min-height: 100%;
+	margin: 0 auto;
+	}
+	
+#pageWrapper {
+	width: 550px;
+	float: left;
+	}
+	
+#content { 
+	background-color: #f9f9fa;
+	background-image: url(../img/page_bg.png);
+	background-repeat: repeat-y;
+	width: 850px; 
+	min-height: 1000px;
+	padding: 0 25px 150px 25px;
+	position: relative;
+	z-index: 10;
+	float: left;
+	-moz-box-shadow: 0px 0px 5px #000000;
+	-webkit-box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 5px #000000;
+	}
+	
+#content ul { 
+	font-size: 12px; 
+	}
+	
+#content img.alignnone, #content img.alignleft, #content img.alignright {
+	background-color: #ffffff; 
+	border: 1px solid #e2e2e2; 
+	padding: 5px; 
+	margin: 0 0 15px 0; 
+	}
+	
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Header
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+	
+#header { 
+	width: 600px;
+	padding: 25px 0 10px 0;  
+	float: left;
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Post Styles
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.post { 
+	width: 550px; 
+	padding: 15px 0 10px 0; 
+	margin: 0 0 10px 0; 
+	float: left; 
+	}
+
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+	margin: 20px 0 15px 0;
+	}
+	
+.post img { 
+	max-width: 535px; 
+	background-color: #ffffff; 
+	border: 1px solid #e2e2e2; 
+	padding: 5px; 
+	margin: 0 10px 10px 0; 
+	}
+
+body.ie .post img {
+	max-width: 535px;
+	max-height: 400px;
+	}
+	
+.post a img:hover { 
+	opacity: .75; 
+	filter: alpha(opacity=75); 
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; 
+	cursor: url(../img/zoom.cur), -moz-zoom-in; 
+	}
+	
+.post .more-link a, .post a.more-link { 
+	margin: 15px 0 -5px 0; 
+	}
+	
+img.attachment-post-thumbnail { 
+	max-width: 535px; 
+	max-height: 200px; 
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Postmeta
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.postmeta { 
+	color: #757575; 
+	text-shadow: 1px 1px 0px #ffffff; 
+	text-transform: uppercase; 
+	font-size: 9px; 
+	letter-spacing: 0.5px; 
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Helvetica, Arial, sans-serif; 
+	padding: 13px 0 10px 3px; 
+	border-top: 1px solid #e2e2e2; 
+	border-bottom: 1px dotted #e2e2e2; 
+	}
+	
+.postmeta a { 
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Helvetica, Arial, sans-serif; 
+	font-size: 9px; 
+	letter-spacing: 0.5px; 
+	margin: 0 0 0 20px; 
+	}
+	
+.postmeta img { 
+	border: none; 
+	background: none; 
+	position: absolute; 
+	margin: -8px 0 0 0; 
+	} 
+	
+.postmeta a img:hover { 
+	cursor: inherit; 
+	}
+
+.postmeta .addthis_toolbox { 
+	padding: 0 25px 0 0; 
+	float: right; 
+	}
+	
+body.ie .postmeta .addthis_toolbox {
+	padding: 0 45px 0 0;
+	}
+	
+.postmeta ul.addthis_toolbox a img { 
+	float: left; 
+	margin: 0; 
+	padding: 0; 
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Pagination 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.postnavi { 
+	width: 550px; 
+	margin: 0 0 10px 0; 
+	padding: 25px 0 0 0; 
+	border-top: 1px solid #e2e2e2; 
+	float: left; 
+	}
+	
+.postnavi a, .postnavi a:visited { 
+	color: #757575; 
+	background-image: url(../img/btn_bg.jpg); 
+	background-repeat: repeat-x; 
+	background-position: 0 0; 
+	text-align: center; 
+	border: 2px solid #dddddd; 
+	-moz-border-radius: 25px; 
+	-webkit-border-radius: 25px; 
+	border-radius: 25px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	padding: 5px 10px 5px 10px; 
+	margin: 10px 5px 0 0; 
+	text-shadow: 1px 1px 0px #ffffff; 
+	float: left; 
+	}
+	
+.postnavi a:hover, .postnavi a:visited:hover { 
+	background-position: 0 -35px; 
+	text-decoration: none; 
+	border: 2px solid #dddddd; 
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9. Comments 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#comments {
+	border-top: 1px solid #e2e2e2;
+}
+
+ul#commentlist { 
+	margin: 0; 
+	padding: 0; 
+	}
+	
+ul#commentlist li {
+	min-height: 125px;
+	width: 550px;
+	padding: 10px 0 10px 0;
+}
+
+ul#commentlist li.alt {
+	background: #ffffff;
+	border-top: 1px solid #e2e2e2;
+	margin: 0;
+}
+
+ul#commentlist li.standard {
+	background: #f9f9f9;
+	border-top: 1px solid #e2e2e2;
+	margin: 0;
+}
+
+.singlecomment, .singlecomment-admin { 
+	width: 75px; 
+	float: left; 
+	margin: 0 0 0 10px;
+	}
+
+.singlecomment p span.small, .singlecomment-admin p span.small {
+	font-size: 10px;
+	}
+	
+.commenttext, .commenttext-admin { 
+	width: 425px; 
+	float: left; 
+	}
+	
+#commentsform { 
+	border-top: 1px solid #e2e2e2; 
+	float: left; 
+	padding: 10px 0 0 0;
+	}
+	
+#commentform input[type="text"] {
+	width: 525px; 
+	color: #757575; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	border: 1px solid #e2e2e2; 
+	padding: 8px; 
+	margin: 10px 0 15px 0;  
+	}
+	
+#commentform textarea { 
+	width: 525px; 
+	color: #757575; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	height: 150px; 
+	border: 1px solid #e2e2e2; 
+	padding: 8px; 
+	margin: 10px 0 15px 0;
+	}
+	
+#commentform h3#reply-title {
+	font-size: 16px;
+	}
+	
+#commentform p.form-allowed-tags, #commentform p.form-allowed-tags code {
+	font-size: 11px;
+	}
+	
+#commentform input#submit { 
+	background-color: #353535;
+	border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	color: #ffffff; 
+	border: none; 
+	margin: 10px 0 0 0; 
+	padding: 5px 8px 5px 8px; 
+	float: right; 
+	}
+	
+#commentform input#submit:hover { 
+	background-color: #757575; 
+	cursor: pointer; 
+	}
+	
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. Sidebar
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#aside { 
+	width: 225px; 
+	padding: 10px 15px 0 0; 
+	float: right; 
+	}
+	
+#aside ul { 
+	margin: 0 0 20px 0; 
+	padding: 10px 0 15px 13px; 
+	border-bottom: 1px dotted #e2e2e2; 
+	}
+	
+#aside ul li ul { 
+	border: none; 
+	margin: 0; 
+	padding: 0; 
+	}
+	
+#aside li { 
+	color: #939393; 
+	font-size: 12px; 
+	list-style: none; 
+	list-style-image: url(../img/list-style.png); 
+	padding: 3px 0 3px 0; 
+	}
+	
+#aside li a { 
+	font-size: 12px; 
+	}
+	
+#aside h6 {  
+	margin: 15px 0 5px 0; 
+	}
+	
+#aside #social {
+	margin: 34px 0 43px 0;
+	float: right; 
+	}
+	
+#aside #social a { 
+	width: 16px; 
+	height: 16px; 
+	margin: 0 0 0 5px; 
+	padding: 0; 
+	background-repeat: no-repeat; 
+	float: left; 
+	}
+	
+form#searchform input[type="text"] { 
+	width: 255px; 
+	height: 37px; 
+	background: transparent; 
+	background-image: url(../img/search.png); 
+	background-repeat: no-repeat; 
+	color: #bcbcbc; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	letter-spacing: 0.5px; 
+	padding: 0 8px 0 32px; 
+	margin: 5px 0 15px -15px; 
+	border: 0!important; 
+	outline: 0!important;
+	text-shadow: 0px 1px 1px #ffffff; 
+	}
+	
+body.ie form#searchform input { 
+	padding-top: 12px;
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11. Contact Page 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#contact ul { 
+	padding: 10px 0 10px 0; 
+	}
+	
+#contact .one_quarter { 
+	padding: 0 25px 0 2px; 
+	}
+	
+#contact .one_half { 
+	padding: 0;  
+	float: left; 
+	}
+	
+#contact form { 
+	padding: 15px 0 0 0; 
+	}
+	
+#contact form label { 
+	color: #757575; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	}
+	
+#contact_form label.error { 
+	color: #ff0000; 
+	width: 550px; 
+	margin: -5px 0 15px 3px; 
+	float: left; 
+	}
+	
+#contact form input[type="text"] { 
+	color: #757575; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	width: 534px; 
+	border: 1px solid #e2e2e2; 
+	padding: 8px; 
+	margin: 10px 0 15px 0; 
+	}
+	
+#contact form textarea { 
+	color: #757575; font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	width: 534px; 
+	height: 150px; 
+	border: 1px solid #e2e2e2; 
+	padding: 8px; 
+	margin: 10px 0 15px 0; 
+	}
+	
+#contact form input[type="submit"] { 
+	background-color: #353535;
+	border-radius: 3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	color: #ffffff; 
+	border: none; 
+	margin: 10px 0 0 0; 
+	padding: 5px 8px 5px 8px; 
+	float: right; 
+	}
+	
+#contact form input[type="submit"]:hover { 
+	background-color: #757575; 
+	cursor: pointer; 
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12. Footer 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#footer { 
+	background-image: url(../img/control_nav.jpg);
+	background-repeat: repeat-x;
+	width: 100%; 
+	height: 62px;
+	margin: 0 auto;  
+	padding: 0; 
+	bottom: 0;
+	float: left; 
+	position: fixed;
+	z-index: 10;
+	font-size: 12px; 
+	}
+
+#footer #up {
+	margin: -30px -50px 0 25px;
+	float: right;
+	}
+	
+body.ie #footer #up {
+	margin: -8px -45px 0 25px;
+	float: right;
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. Extras, Widgets
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+ul#twitter_update_list { 
+	width: 225px; 
+	margin: 0 0 20px 0; 
+	padding: 0 0 15px 0;
+	float: left; 
+	}
+	
+#twitter_update_list li { 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 11px; 
+	margin: 10px 0 15px 0; 
+	list-style: none;
+	}
+	
+#twitter_update_list li span { 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif;  
+	font-size: 11px; 
+	}
+	
+#twitter_update_list li a { 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif;  
+	font-size: 11px; 
+	list-style: none; 
+	}
+	
+p.preLoader { 
+	font-size: 11px; 
+	}
+	
+#flickr {
+	width: 225px;
+	float: left;
+	border-bottom: 1px dotted #e2e2e2; 
+	margin: 20px 0 20px 0;
+	padding: 0 0 15px 0;
+	}
+
+#flickr a img {
+	width: 52px;
+	height: 52px;
+	}
+	
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14. Wordpress Default Styling
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+	
+.attachment .entry-content .entry-caption {
+	font-size: 140%;
+	margin-top: 24px;
+	}
+
+.attachment .entry-content .nav-previous a:before {
+	content: '\2190\00a0';
+	}
+
+.attachment .entry-content .nav-next a:after {
+	content: '\00a0\2192';
+	}
+
+#calendar_wrap { 
+	background-color: #dfdfdf; 
+	}
+	
+table#wp-calendar { 
+	border-collapse: collapse; 
+	margin: 0 0 0.4em; 
+	width: 100%; 
+	background-color: #808080; 
+	margin-bottom:0 !important; 
+	border-spacing: 0; 
+	text-shadow: 1px 1px 0px #ffffff; 
+	}
+	
+#wp-calendar td { 
+	background-color: #ffffff; 
+	border: 1px solid #cfcfcf !important; 
+	color: #808080; 
+	padding: 6px !important; 
+	}
+	
+#wp-calendar th { 
+	background-color: #eeeeee; 
+	border: 1px solid #cfcfcf !important; 
+	color: #808080; 
+	padding: 3px 0 !important; 
+	font-weight: bold; 
+	text-align: center; 
+	}
+	
+#wp-calendar caption { 
+	color: #808080; 
+	font-weight: bold; 
+	text-align: center; 
+	padding: 10px; 
+	}
+
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img {
+	max-width: 535px;
+	height: auto;
+	}
+	
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+	}
+	
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+	}
+	
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 10px;
+	}
+	
+.wp-caption {
+	background: #f1f1f1;
+	line-height: 18px;
+	margin-bottom: 20px;
+	max-width: 675px !important;
+	padding: 5px;
+	text-align: center;
+	}
+	
+.wp-caption img {
+	margin: 0 10px 10px 0;
+	}
+	
+.wp-caption p.wp-caption-text {
+	color: #757575;
+	font-size: 12px;
+	margin: 5px;
+	}
+	
+.wp-smiley {
+	margin: 0;
+	}
+	
+.gallery {
+	margin: 0 auto 18px;
+	}
+	
+.gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+	}
+	
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+	}
+	
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+	}
+	
+.gallery img {
+	border: 2px solid #e2e2e2;
+	}
+	
+.gallery-columns-2 .attachment-medium {
+	max-width: 92%;
+	height: auto;
+	}
+	
+.gallery-columns-4 .attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+	}
+	
+.gallery .gallery-caption {
+	color: #757575;
+	font-size: 12px;
+	margin: 0 0 12px;
+	}
+	
+.gallery dl {
+	margin: 0;
+	}
+	
+.gallery img {
+	border: 10px solid #e2e2e2;
+	}
+	
+.gallery br+br {
+	display: none;
+	}
+	
+#content .attachment img {
+	display: block;
+	margin: 0 auto;
+	}
+
+/* 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15. Shortcodes
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.one_full { 
+	width: 550px; 
+	margin: 0; 
+	float: left; 
+	}
+
+.one_half { 
+	width: 260px; 
+	margin: 0 15px 0 0; 
+	float: left; 
+	}
+	
+.one_half_last { 
+	width: 260px; 
+	margin: 0; 
+	float: right; 
+	}
+
+.one_third { 
+	width: 160px; 
+	margin: 0 30px 0 0; 
+	float: left; 
+	}
+	
+.one_third_last { 
+	width: 160px; 
+	margin: 0; 
+	float: right; 
+	}
+
+.two_third { 
+	width: 340px; 
+	margin: 0 30px 0 0; 
+	float: left; 
+	}
+	
+.two_third_last { 
+	width: 320px; 
+	margin: 0; 
+	float: right; 
+	}
+
+.one_quarter { 
+	width: 115px; 
+	margin: 0 30px 0 0; 
+	float: left; 
+	}
+	
+.one_quarter_last { 
+	width: 115px; 
+	margin: 0; 
+	float: right; 
+	}
+
+.default_box { 
+	background-color: #f7f7f7; 
+	border: 1px solid #bcbcbc; 
+	color: #808080; 
+	padding: 10px; 
+	}
+	
+.notice_box { 
+	background-color: #ffffe0; 
+	border: 1px solid #e6db55; 
+	color: #c7b634; 
+	padding: 10px; 
+	}
+	
+.warning_box { 
+	background-color: #ffdfdf; 
+	border: 1px solid #ff0000; 
+	color: #ff0000; 
+	padding: 10px; 
+	}
+	
+.success_box { 
+	background-color: #e2f3c3; 
+	border: 1px solid #7be568; 
+	color: #708421; 
+	padding: 10px; 
+	}
+	
+.download_box { 
+	background-color: #aad0e4; 
+	border: 1px solid #0097ce; 
+	color: #0097ce; 
+	padding: 10px; 
+	}
+
+.default_box, .notice_box, .warning_box, .success_box, .download_box { 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 12px; 
+	width: 530px; 
+	margin: 5px 0 5px 0; 
+	float: left; 
+	text-shadow: none; 
+	line-height: 20px; 
+	}
+	
+.default_box img, .notice_box img, .warning_box img, 
+.success_box img, .download_box img { 
+	width: 16px; 
+	height: 16px; 
+	margin: 0 5px 0 0; 
+	padding: 0; 
+	border: none; 
+	float: left; 
+	}
+
+.bullet_list li, .arrow_list li, .check_list li { 
+	margin: 0 0 0 10px; 
+	}
+
+.bullet_list li { 
+	list-style-image: url(../img/bullet.png); 
+	}
+	
+.arrow_list li { 
+	list-style-image: url(../img/arrow.png); 
+	}
+	
+.check_list li { 
+	list-style-image: url(../img/check.png); 
+	}
+
+blockquote { 
+	color: #757575; 
+	text-shadow: 1px 1px 0px #ffffff; 
+	font-size: 14px; 
+	margin: 5px 0 25px 25px; 
+	border-left: 5px solid #e1e1e1; 
+	padding: 0 0 0 5px; 
+	line-height: 18px; 
+	float: left; 
+	}
+	
+blockquote p { 
+	margin: 0; 
+	font-family: Georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	}
+
+.ui-accordion-content { 
+	padding: 15px 0 15px 5px; 
+	}
+
+.accordion_title { 
+	background-image: url(../img/btn_bg.jpg); 
+	background-repeat: repeat-x; 
+	background-position: 0 0; 
+	border: 1px solid #dddddd; 
+	margin: 0 0 1px 0; 
+	padding: 8px 0 7px 10px; 
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif; 
+	font-size: 11px; 
+	color: #757575; 
+	text-shadow: 0px 1px 1px #ffffff; 
+	text-transform: uppercase; 
+	cursor: pointer; 
+	}
+	
+.accordion_title:hover { 
+	background-position: 0 -35px; 
+	}
+	
+.accordion_title a img { 
+	width: 16px; 
+	height: 16px; 
+	margin: 0 5px 0 -3px; 
+	padding: 0; 
+	border: none; 
+	float: left; 
+	}
+
+.highlight { 
+	background-color: #ffffe0; 
+	padding: 3px; 
+	}
+
+.button_link a, .button_link a:visited { 
+	color: #757575; 
+	background-image: url(../img/btn_bg.jpg); 
+	background-repeat: repeat-x; 
+	background-position: 0 0; 
+	text-align: center; 
+	border: 2px solid #dddddd; 
+	-moz-border-radius: 25px; 
+	-webkit-border-radius: 25px; 
+	border-radius: 25px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	padding: 5px 10px 5px 10px;
+	margin: 15px 5px 0 0; 
+	text-shadow: 1px 1px 0px #ffffff; 
+	float: left; 
+	}
+	
+.button_link a:hover, .button_link a:visited:hover { 
+	background-position: 0 -35px; 
+	text-decoration: none; 
+	border: 2px solid #dddddd; 
+	}
+
+.splitter { 
+	background: none; 
+	border-top: 1px solid #e2e2e2; 
+	width: 100%; 
+	height: 1px; 
+	margin: 15px 0 25px 0; 
+	padding: 0; 
+	float: left; 
+	}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+End of editable section.
+ 
+Do not edit the values below unless you know what you're doing! 
+
+It could totally destroy the themes styling!
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Tooltip */
+.tipsy { font-family: "Droid Sans", Helvetica, Arial, sans-serif; color: #ffffff; padding: 5px; font-size: 10px; position: absolute; z-index: 100000; }
+.tipsy a { font-family: "Droid Sans", Helvetica, Arial, sans-serif; color: #ffffff; }
+.tipsy-inner { padding: 5px 8px 6px 8px; background-color: black; color: white; max-width: 200px; text-align: left; border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; font-size: 12px; }
+.tipsy-arrow { position: absolute; background: url('../img/tipsy.gif') no-repeat top left; width: 9px; height: 5px; }
+.tipsy-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+.tipsy-nw .tipsy-arrow { top: 0; left: 10px; }
+.tipsy-ne .tipsy-arrow { top: 0; right: 10px; }
+.tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+.tipsy-e .tipsy-arrow { top: 50%; margin-top: -4px; right: 0; width: 5px; height: 9px; background-position: top right; }
+.tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+
+/* Loader */
+.QOverlay { background-image: url(../img/trans_bg.png); background-repeat: repeat; z-index: 9999; }
+.QLoader { background-color: #ff6900; height: 2px; }
+
+/* Colorbox */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:999999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+#cboxOverlay{background:url(../img/overlay.png) 0 0 repeat;}
+#colorbox{ font-family: Helvetica, Arial, sans-serif; font-size: 13px; }
+#cboxTopLeft{width:21px; height:21px; background:url(../img/controls.png) -100px 0 no-repeat;}
+#cboxTopRight{width:21px; height:21px; background:url(../img/controls.png) -129px 0 no-repeat;}
+#cboxBottomLeft{width:21px; height:21px; background:url(../img/controls.png) -100px -29px no-repeat;}
+#cboxBottomRight{width:21px; height:21px; background:url(../img/controls.png) -129px -29px no-repeat;}
+#cboxMiddleLeft{width:21px; background:url(../img/controls.png) left top repeat-y;}
+#cboxMiddleRight{width:21px; background:url(../img/controls.png) right top repeat-y;}
+#cboxTopCenter{height:21px; background:url(../img/border.png) 0 0 repeat-x;}
+#cboxBottomCenter{height:21px; background:url(../img/border.png) 0 -29px repeat-x;}
+#cboxContent{background:#fff;}
+#cboxLoadedContent{margin-bottom:28px;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color: #6b747d; text-shadow: 1px 1px 0px #ffffff;}
+#cboxCurrent{position:absolute; bottom:4px; left:58px; color: #6b747d; text-shadow: 1px 1px 0px #ffffff;}
+#cboxSlideshow{position:absolute; bottom:4px; right:30px; color: #6b747d; text-shadow: 1px 1px 0px #ffffff;}
+#cboxPrevious{position:absolute; bottom:0; left:0px; background:url(../img/controls.png) -75px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious.hover{background-position:-75px -25px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(../img/controls.png) -50px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext.hover{background-position:-50px -25px;}
+#cboxLoadingOverlay{background:url(../img/loading_background.png) center center no-repeat;}
+#cboxLoadingGraphic{background:url(../img/loading.gif) center center no-repeat;}
+#cboxClose{position:absolute; bottom:0; right:0; background:url(../img/controls.png) -25px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+#cboxClose.hover{background-position:-25px -25px;}
+
+/* Clear Fix */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+
+/* Hide from IE-mac */
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+/* Generic Classes */
+.tiny { font-size: 10px; }
+.error { color: #ff0000; }
+.small { font-size: 11px; }
+.alignleft { float: left; }
+.alignright: { float: right; }
+.fadein { visibility: hidden; }
+.nobox { border: 0; box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none; }
+.more-link a, a.more-link, .more-link a:visited, a.more-link:visited { color: #757575; background-image: url(../img/btn_bg.jpg); background-repeat: repeat-x; background-position: 0 0; text-align: center; border: 2px solid #dddddd; -moz-border-radius: 25px; -webkit-border-radius: 25px; border-radius: 25px; font-size: 12px; font-weight: bold; padding: 5px 10px 5px 10px; margin: 15px 5px 0 0; text-shadow: 1px 1px 0px #ffffff; float: right; }
+.more-link a:hover, a.more-link:hover, .more-link a:visited:hover, a.more-link:visited:hover { background-position: 0 -35px; text-decoration: none; border: 2px solid #dddddd; }
+
+/* Overrides ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#footer .one_quarter_last { float: left; }

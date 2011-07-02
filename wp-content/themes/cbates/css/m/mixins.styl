@@ -1,0 +1,63 @@
+serif = Georgia, 'serif'
+mono = Consolas, 'Lucida Console', Monaco, Courier New, monospace
+sans = 'Helvetica Neue', Arial, Helvetica, sans-serif
+lucida = 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif 
+
+font-smoothing()
+  -webkit-font-smoothing antialiased
+
+button()
+  display inline-block
+  b none
+  cursor pointer
+  p 0 2em
+  m 0
+  df()
+  lh 3em
+  background linear-gradient(top, m70, m60)
+  c #fff
+  &:hover, &:focus
+    background linear-gradient(top, m75, m65)
+  &:active
+    background linear-gradient(top, m50, m65)
+  &.disabled
+    cursor default
+    opacity .75
+    &:hover
+      background linear-gradient(top, m80 0%, m60 100%)
+  &[disabled]:active, &[disabled]:hover
+    background #EEEEEE
+
+ir()
+  display block
+  text-indent -999em
+  overflow hidden
+  background-repeat no-repeat
+  text-align left
+  direction ltr
+
+invisible()
+  visibility hidden
+
+hidden()
+  display none
+  invisible()
+
+visuallyhidden()
+  position absolute
+  clip rect(0 0 0 0)
+  overflow hidden
+  margin -1px
+  padding 0
+  height 1px
+  width 1px
+  border 0
+
+visuallyhiddenfocusable()
+  &:active, &:focus
+    position static
+    clip auto
+    overflow visible
+    height auto
+    margin 0
+    width auto

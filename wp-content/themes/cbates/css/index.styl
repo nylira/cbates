@@ -1,0 +1,97 @@
+x = 16px
+txt = #ccc
+
+df()
+  s x
+  lh 1.5
+  ff sans
+  c txt
+
+link = #0ae
+hover = #fff
+
+a
+  color link
+  td none
+  &:hover, &:focus
+    color hover
+
+html
+  height 100%
+
+body
+  df()
+  bg m30
+  overflow-x hidden
+  pt x*4
+  &.fs
+    overflow hidden
+
+#contentWrapper
+  cnt()
+  p x*4 0
+
+  #content
+    position relative
+    z-index 10
+
+    h1
+      f bold 200%/1.5 sans
+      mb 1em
+      font-smoothing()
+
+    #pageWrapper
+      col 8
+      font-smoothing()
+
+      > p:first-of-type
+        s 150%
+        ff serif
+
+      img.alignnone, img.alignleft, img.alignright
+        m 0 0 1em
+
+
+     
+      h2, .h2
+        f 200%/1.5 sans
+        display block
+        mb x
+        a
+          color txt
+          transition
+          bb 1px solid transparent
+          &:hover
+            bc anchor
+
+      h3
+        alt-font()
+        mb x
+        tt uppercase
+        ls 2px
+        c #999
+        s 85%
+
+
+      p, ul, ol
+        m 0 0 1em
+
+      ol li
+        list-style decimal
+
+      pre, code
+        p 0 0 0 15px
+        ff monospace
+        s 13px
+
+      sup
+        bottom 1ex
+
+      sub
+        top .5ex
+
+      blockquote
+        s 1.5em
+        m 5px 0 25px 25px
+        bl 5px solid #e1e1e1
+        p 0 0 0 5px

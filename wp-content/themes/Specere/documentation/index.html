@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Theme Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Specere&rdquo; Documentation by &ldquo;iKreativ&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Specere&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 22/03/11<br>
+					By: iKreativ<br>
+					Email: <a href="mailto:hello@ikreativcom">hello@ikreativ.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email us. Thanks so much!</p>
+				<p>We've also created a full setup tutorial/screencast which you may view here: <a href="http://themes.ikreativ.com/specere/screencast/">Specere Screencast</a>. Note: The Screencast is password protected, the password is: <b>specere_screencast</b></p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#install">Theme Installation</a></li>
+			<li><a href="#fullscreen">Fullscreen Gallery</a></li>
+			<li><a href="#options">Theme Options</a></li>
+			<li><a href="#shortcodes">Theme Shortcodes</a></li>
+			<li><a href="#form">Contact Form</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a fixed layout. All of the HTML code carries comments to note the start and end of a section, a comment is text held between <!-- --> these tags. The general template structure is the same throughout the template. Here is the general structure.</p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>There are 4 CSS files in this theme.</p> 
+		
+		<ul>
+		<li>reset.css - This file resets browser default styling ready for the global stylesheet. Location: /css/reset.css</li>
+		<li>typo.css - This file sets the default typography. Location: /css/typo.css</li>
+		<li>global.css - This file sets the site styling, this file overrides any of the above. Location: /css/global.css</li>
+		<li>ie.css - This file sets any seperate styling for Internet Explorer 7+. Location: /css/ie.css</li>
+		</ul>
+
+		<p>All the stylesheets are separated into sections using comments like below:</p>  
+
+<pre>	/* Header Section ------------------------*/
+
+	some code
+
+	/* Main Section ------------------------*/
+	
+	some code
+	
+	/* Sidebar Section ------------------------*/
+	
+	some code
+	
+	/* Footer ------------------------*/
+	
+	some code
+	
+	etc, etc. 
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme uses various Javascript files. The most notable are:</p>
+		
+		<ol>
+			<li><b>jQuery</b></li>
+			<li><b>Gallery</b></li>
+			<li><b>Cufon</b></li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>Gallery is used for the main fullscreen images.</li>
+			<li>Colorbox is used to create the image zoom effect when clicking an image with a link.</li>
+			<li>Cufon is used to replace header fonts with embedded fonts using javascript.</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="install"><strong>D) Theme Installation</strong> - <a href="#toc">top</a></h3>
+		
+		<p>There are two ways to install your new Wordpress theme. You may install via the Wordpress Admin section, or via FTP.</p>
+
+		<p><strong>Installation via Admin:</strong></p>
+		<ol>
+			<li>Log in to your Wordpress Admin section at http://your-website.com/wp-admin/</li>
+			<li>Once logged in you will need to navigate to Appearance > Themes > Install Themes from the left menu. From there click Upload from the top sub-menu.</li>
+			<li>Click on the Browse button and browse to where you saved your theme and select it. Now click Install Now. Once installed it will return and ask you if you would like to activate the new theme, click activate.</li>
+		</ol>
+
+		<p><strong>Installation via FTP:</strong></p>
+		<ol>
+			<li>Open up your favourite FTP client and enter your FTP credentials given to you by your Web Host.</li>
+			<li>Once you have connected to your server via FTP you need to navigate to /wp-content/themes/</li>
+			<li>Next extract / unzip your theme.zip. This will create a folder with the same name as the theme.zip file only without the .zip extension.</li>
+			<li>Now you need to upload the extracted folder into your /wp-content/themes/ directory with your FTP client.</li>
+			<li>Once uploaded, head over to your Wordpress Admin section in your web browser and from the left menu navigate to Appearance > Themes. You will now see your newly installed theme. Click activate.</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="fullscreen"><strong>E) Fullscreen Gallery</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme is primarily focused on showcasing your work, hence the gallery being the home page and the first thing your visitors will see, leaving a great first impression!</p>
+		<p>This walkthrough will explain exactly how to setup not only the fullscreen gallery, but also the other sections of the site to create a fully functioning showcase like the theme demo.</p>
+		<ul>
+			<li><b>1)</b> Create a page of your choice, and while inside the page editor under the attributes menu on the right hand side, simply set the page template to 'gallery'. This will setup the page ready for adding your images.</li>
+			<li><b>2)</b> Now simply add all of your images either with a definitive URL or via the Image uploader underneath the page editor.</li>
+			<li>Once the images have uploaded click on 'Save All Changes' from the uploader window, then select the image you'd like to use, or you may click on the 'Select All' link and then 'Inert All Images'. Now Publish.</li>
+			<li><b>3)</b> That's it! Everything else is done for you. The thumbnails will be autogenerated along with the scrolling navigation.</li>
+			<li><b>4)</b> &mdash; To choose a static image behind a page simply click on the Featured Image box in a page and upload your image.</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="options"><strong>F) Theme Options</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Once you have finished installing your new theme you can then begin editing the look and feel and also the other various theme options from the in-built Options Panel. Once logged into your Wordpress Admin, the theme options panel may be accessed by clicking on the Appearance > Options. This will then open the theme options panel for configuration.</p>
+		
+		<p>Each tabbed section carries various options which all have descriptions to help you thorough the setup process. We will run through the available settings below.</p>
+		
+		<ul>
+			<li>
+				<b>General Settings:</b>
+				<ul>
+					<li><b>Logo</b> &mdash; Upload a logo of your choice, if you do not add a logo this will simply default back to the name of your site.</li>
+					<li><b>Favicon</b> &mdash; Upload a 16 x 16px .gif or .png image to be used as your site favicon.</li>
+					<li><b>Email Address</b> &mdash; Set the email address that you would like all mail coming from the in-built contact form to go to.</li>
+				</ul>
+			  <br />
+				<b>Preloader Settings:</b>
+				<ul>
+					<li><b>Preloader Color</b> &mdash; Choose a color for the preloader.</li>
+					<li><b>Disable</b> &mdash; Disable the preloader.</li>
+				</ul>
+			  <br />
+				<b>CSS Settings:</b>
+				<ul>
+					<li><b>Custom CSS</b> &mdash; Add any additional CSS styling. This will override any other CSS through the site.</li>
+				</ul>
+				<br />
+				<b>Typography Options:</b>
+				<ul>
+					<li><b>Main Text</b> &mdash; Choose the settings for the main body text. Size, type, weight and color.</li>
+					<li><b>Heading Colors</b> &mdash; Choose the color for the page Headings.</li>
+					<li><b>Cufon Font Replacement</b> &mdash; Choose the font you would like for the site headings. If this is set to disabled it will default back to CSS browser fonts.</li>
+				</ul>
+				<br/>
+				<b>Fullscreen Imagery:</b>
+				<ul>
+					<li><b>Disable Panning</b> &mdash; Disable the image panning.</li>
+					<li><b>Disable Overlay</b> &mdash; Disable the cross hatch overlay that sits over the top of images. This has the added benefit of preventing right click view image in a browser.</li>
+				</ul>
+				<br />
+			  <b>Social Integration:</b>
+			  <ul>
+			    <li><b>Twitter</b> &mdash; Add your Twitter username. If this is set it will enable the Twitter icon in the navigation and also the Twitter widget on the homepage</li>
+			    <li><b>Facebook</b> &mdash; Add your Facebook profile ID. This is the long number at the end of your Facebook URL. i.e: http://www.facebook.com/#!/profile.php?id=1234567890 Paste ONLY the number. If this is set it will enable the Facebook icon in the navigation</li>
+		      </ul>
+			  <br />
+			 <b>Twitter Widget:</b>
+			  <ul>
+			    <li><b>Twitter</b> &mdash; Add your Twitter username.</li>
+			    <li><b>Tweet Number</b> &mdash; How many Tweets to display?</li>
+				<li><b>Widget Title</b> &mdash; Title to display above the widget.</li>
+				<li><b>Disable</b> &mdash; Disable the widget.</li>
+		      </ul>
+			  <br />
+			<b>Flickr Widget:</b>
+			  <ul>
+			    <li><b>Flickr</b> &mdash; Enter your Flickr RSS URL. You can find your Flickr feed by going to Flickr.com, log in and then click Your Photostream. After the page loads, scroll down to the bottom and find Subscribe to Your Name's photostream then copy the link.</li>
+			    <li><b>Flickr Number</b> &mdash; How many photos to display?</li>
+				<li><b>Widget Title</b> &mdash; Title to display above the widget.</li>
+				<li><b>Disable</b> &mdash; Disable the widget.</li>
+		      </ul>
+			  <br />
+			<b>Popular Widget:</b>
+			  <ul>
+				<li><b>Widget Title</b> &mdash; Title to display above the widget.</li>
+				<li><b>Disable</b> &mdash; Disable the widget.</li>
+		      </ul>
+			  <br />
+			<b>Categories Widget:</b>
+			  <ul>
+				<li><b>Widget Title</b> &mdash; Title to display above the widget.</li>
+				<li><b>Disable</b> &mdash; Disable the widget.</li>
+		      </ul>
+			  <br />
+			<b>Archives Widget:</b>
+			  <ul>
+				<li><b>Widget Title</b> &mdash; Title to display above the widget.</li>
+				<li><b>Disable</b> &mdash; Disable the widget.</li>
+		      </ul>
+			  <br />
+			  <b>Blog Options:</b>
+			  <ul>
+				<li><b>Static Image</b> &mdash; Choose the image you would like to show as the Blog background.</li>
+			    <li><b>Default Display Setting</b> &mdash; Set how you would like your posts displayed. Either the full content, or the post excerpt.</li>
+		      </ul>
+			  <br />
+			  <b>Analytics:</b>
+			  <ul>
+			    <li><b>Tracking</b> &mdash; Enter your Google Analytics or other tracking code.</li>
+		      </ul>
+			  <br />
+			  <b>SEO:</b>
+			  <ul>
+			    <li><b>Description and Keywords</b> &mdash; Describe your website and services and add relevant keywords that match the description and content.</li>
+		      </ul>
+		  </li>
+      </ul>
+	<br />
+		
+		<hr>
+		
+		<h3 id="shortcodes"><strong>G) Theme Shortcodes</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme comes with various shortcodes that enable you to create items such as columns, lists and boxes with ease. Shortcodes simply wrap your content in a page or post.<br /><br />All of the shortcodes can also be seen in action in the live demo under the Features tab.</p>
+		
+		<ol>
+			<li><h4><strong>Available Columns</strong></h4> &mdash; one_full, one_half, one_third, two_third, one_quarter.<br /><br />Note: each set of columns with the exception of one_full has a right column with no margin added. This is to be used for the last column to the right. Each right column is simply ended with _last, I.E: one_third_last, one_quarter_last etc...<br /><br />Example: <pre>[one_full]You would type these shortcodes when adding or editing a post or page.[/one_full]</pre></li>
+			<hr>
+			<li><h4><strong>Accordion</h4></strong> &mdash; accordion.<br /><br />Example: <pre>[accordion title="Title to be shown on accordion"]accordion content initially hidden...[/accordion]</pre></li>
+			<hr>
+			<li><h4><strong>Toggler</h4></strong> &mdash; toggle.<br /><br />Example: <pre>[toggle]add your toggle content initially hidden...[/toggle]</pre></li>
+			<hr>
+			<li><h4><strong>Available Boxes</h4></strong> &mdash; default_box, notice_box, success_box, warning_box, download_box.<br /><br />Example: <pre>[default_box]add your content here, inside the shortcodes...[/default_box]</pre></li>
+		<hr>
+		
+		<h3 id="form"><strong>H) Using the in-built Contact Form</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme comes with a simple in-built contact form which is easy to setup.</p><p>To use the form simply create a new page from your Wordpress Admin and add any content you wish. Then from the right hand panel while inside the page editor you will see where it says 'Page Attributes' from here you can select a page template to use. Select the 'Contact' page template and click update to save.</p><p>Note: The contact form uses the email address which is set in the theme options panel as described above.</p>
+		
+		<hr>
+		
+		<h3 id="credits"><strong>I) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons, fonts or other files as listed.
+		
+		<ul>
+			<li><b>jQuery</b> &mdash; <a href="http://jquery.com/">http://jquery.com</a></li>
+			<li><b>QueryLoader</b>&mdash <a href="http://www.gayadesign.com/scripts/queryLoader/">http://www.gayadesign.com/scripts/queryLoader/</a></li>
+			<li><b>Photos used in demo. NOT INCLUDED.</b>&mdash <a href="http://www.flickr.com/photos/dexxus/">http://www.flickr.com/photos/dexxus/</a></li>
+			<li><b>Photos used in demo. NOT INCLUDED.</b>&mdash <a href="http://www.flickr.com/photos/markjsebastian/">http://www.flickr.com/photos/markjsebastian/</a></li>
+			<li><b>Cufon</b> &mdash; <a href="http://cufon.shoqolate.com/">http://cufon.shoqolate.com/</a></li>
+			<li><b>Anklada Font</b> &mdash; <a href="http://www.dafont.com/anklada.font">http://www.dafont.com/anklada.font/</a></li>
+			<li><b>Cantarell Font</b> &mdash; <a href="http://abattis.org/cantarell/">http://abattis.org/cantarell/</a></li>
+			<li><b>Coolvetica Font</b> &mdash; <a href="http://typodermicfonts.com/">http://typodermicfonts.com/</a></li>
+			<li><b>Lobster Font</b> &mdash; <a href="http://www.impallari.com/lobster/">http://www.impallari.com/lobster/</a></li>
+			<li><b>London Font</b> &mdash; <a href="http://www.fontcubes.com/Francois-Bruel.author">http://www.fontcubes.com/Francois-Bruel.author</a></li>
+			<li><b>Maximus Font</b> &mdash; <a href="http://www.dafont.com/neale-davidson.d32">http://www.dafont.com/neale-davidson.d32</a></li>
+			<li><b>Merge Font</b> &mdash; <a href="http://www.philatype.com/">http://www.philatype.com/</a></li>
+			<li><b>Museo Font</b> &mdash; <a href="http://www.josbuivenga.demon.nl/museo.html">http://www.josbuivenga.demon.nl/museo.html</a></li>
+			<li><b>Nadia Font</b> &mdash; <a href="http://quersicht.ch/04_labor/04_ft_nadi.html">http://quersicht.ch/04_labor/04_ft_nadi.html</a></li>
+			<li><b>Titillium Font</b> &mdash; <a href="http://www.campivisivi.net/titillium/">http://www.campivisivi.net/titillium/</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme, and if you require any help please feel free to get in touch!</p> 
+		
+		<p class="append-bottom alt large"><strong>iKreativ</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
