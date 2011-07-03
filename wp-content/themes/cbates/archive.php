@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<div id="pageWrapper">
 <ul class="posts">
 	<?php if(have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -17,5 +18,6 @@
 
 	<?php include('inc/postnav.php'); ?> 
 
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
