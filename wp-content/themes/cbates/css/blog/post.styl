@@ -1,44 +1,56 @@
 #content
-  ul.posts
-    col 8
-    li.post
-      m 0 0 1px
-      &.excerpt a
-        display block
-        p 1.75em
-        bg m40
-        transition()
-        h2
-          f 150%/1.1 sans
-          m 0 0 x*.5
-        p.time
-          c #666
-        &:hover
-          bg m46
-          bc link
+  #pageWrapper
+    ul.posts
+      li.post
+        m 0 0 1px
+        &.excerpt a
+          display block
+          p 1.25em 1.75em
+          bg m40
+          transition()
+          h2
+            f 150%/1.1 sans
+            m 0 0 x*.5 !important
+            font-smoothing()
+          p
+            m 0 !important
+            &.time
+              c #666
+          &:hover
+            bg m46
+            bc link
 
-.post.page
-  h1, h2, h3, h4, h5, h6
-    margin: 0 0 x*1.5
+#pageWrapper
+  .post.single
+    pr 2em
 
-  img
-    max-width 100%
-    bg w10
-    p 10px
-    padding: 5px
-    m 0 10px 10px 0
+    p
+      ff serif
+      &.time
+        c #666
+        m -3em 0 3em !important
 
-  body.ie img
-    max-width: 535px
-    max-height: 400px
+    h1, h2, h3, h4, h5, h6
+      margin: 0 0 x*1.5
 
-  a img:hover
-    opacity 0.75
-    cursor: url(img/zoom.cur)
+    img
+      max-width 100%
+      bg w10
+      p 10px
+      padding: 5px
+      m 0 10px 10px 0
 
-  .more-link a, a.more-link
-    margin: 15px 0 -5px 0
+    body.ie img
+      max-width: 535px
+      max-height: 400px
 
-  img.attachment-post-thumbnail
-    max-width: 535px
-    max-height: 200px
+    a img:hover
+      opacity 0.75
+      cursor: url(img/zoom.cur)
+
+    img.attachment-post-thumbnail
+      max-width: 535px
+      max-height: 200px
+
+  #back
+    p x*3 0 x*4

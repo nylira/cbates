@@ -20,9 +20,9 @@
 
 <div id="comments">
 
-	<h6 class="comments_number">
+	<h2 class="comments_number">
 		<?php comments_number(__('0 Comments', 'specere'), __('1 Comment so far', 'specere'), __('% Comments so far', 'specere')); ?>
-	</h6>
+	</h2>
 
 	<ul id="commentlist">
 
@@ -59,14 +59,6 @@
 		?>
 
 	</li>
-   
-<?php /* Changes every other comment to a different class */	
-	if ('alt' == $oddcomment){
-		$oddcomment = 'standard';
-	} else {
-		$oddcomment = 'alt';
-	}
-?>
 
 <?php endforeach; /* end for each comment */ ?>
 </ul>
@@ -89,24 +81,6 @@
 <div id="commentsform">
   
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-<?php if ( $user_ID ) : ?>
-
-<?php else : ?>
-
-<p><label for="author"><?php _e('Name', 'specere'); ?> <?php if($req) echo "<small>(required)</small>"; ?></label><br />
-<input type="text" name="author" id="s1" value="<?php echo $comment_author; ?>" size="40" tabindex="1" />
-</p>
-
-<p>
-<label for="email"><?php _e('Mail (will not be published)', 'specere'); ?> <?php if ($req) echo "<small>(required)</small>"; ?></label><br />
-<input type="text" name="email" id="s2" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
-</p>
-
-<p><label for="url"><?php _e('Website', 'specere'); ?></label><br />
-<input type="text" name="url" id="s3" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
-</p>
-
-<?php endif; ?>
 
 <?php comment_form(); ?>
 

@@ -3,11 +3,10 @@
 <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
   <div id="pageWrapper">
 
-	<div class="post content" id="post-<?php the_ID(); ?>">
+	<div class="post single" id="post-<?php the_ID(); ?>">
 
-		<?php include('inc/postmeta.php'); ?>
+    <p class="time"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?></p>
 
-		<h4><a href="<?php echo get_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 		<?php the_post_thumbnail(); ?><?php the_content('',FALSE,'');?>
 
 		<div id="back" class="button_link">

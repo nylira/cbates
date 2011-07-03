@@ -1,5 +1,13 @@
 <div id="aside">
   <ul class="widgets">
+    <?php if(get_option('of_categories_widget') != 'true') { ?>
+    <li id="categories" class="categories widget">
+      <h3><?php echo get_option('of_categories_widget_title'); ?></h3>
+      <ul>
+        <?php wp_list_categories('&title_li=&depth=1'); ?>
+      </ul>
+    <?php } ?>
+
     <li class="social widget">
       <h3>Social</h3>
       <ul>
@@ -77,15 +85,7 @@
       </ul>
     <?php } ?>
 
-    <?php if(get_option('of_categories_widget') != 'true') { ?>
     
-    <li id="categories" class="categories widget">
-      <h3><?php echo get_option('of_categories_widget_title'); ?></h3>
-      <ul>
-        <?php wp_list_categories('&title_li=&depth=1'); ?>
-      </ul>
-    <?php } ?>
-
     <?php if(get_option('of_archives_widget') != 'true') { ?>
       <li id="archives" class="archives widget">
         <h3><?php echo get_option('of_archives_widget_title'); ?></h3>

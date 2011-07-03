@@ -6,6 +6,18 @@ lucida = 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif
 font-smoothing()
   -webkit-font-smoothing antialiased
 
+input()
+  w 100%
+  bg m40
+  b none
+  font 1em/1 sans
+  c txt
+  p 1em
+  box-sizing border-box
+  m 0
+  display block
+  font-smoothing()
+
 button()
   display inline-block
   b none
@@ -20,13 +32,9 @@ button()
     background linear-gradient(top, m75, m65)
   &:active
     background linear-gradient(top, m50, m65)
-  &.disabled
-    cursor default
-    opacity .75
-    &:hover
-      background linear-gradient(top, m80 0%, m60 100%)
-  &[disabled]:active, &[disabled]:hover
-    background #EEEEEE
+
+input[type="submit"], button, .more-link a, a.more-link
+  button()
 
 ir()
   display block

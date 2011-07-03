@@ -234,21 +234,8 @@
 #cboxClose.hover
   background-position -25px -25px
 
-.clearfix:after
-  content "."
-  display block
-  height 0
-  clear both
-  visibility hidden
-
 .clearfix
-  display inline-block
-
-* html .clearfix
-  height 1%
-
-.clearfix
-  display block
+  clearfix()
 
 .tiny
   font-size 10px
@@ -271,30 +258,6 @@
 .nobox
   border 0
   box-shadow none
-  -moz-box-shadow none
-  -webkit-box-shadow none
-
-.more-link a, a.more-link, .more-link a:visited, a.more-link:visited
-  color #757575
-  background-image url(img/btn_bg.jpg)
-  background-repeat repeat-x
-  background-position 0 0
-  text-align center
-  border 2px solid #dddddd
-  -moz-border-radius 25px
-  -webkit-border-radius 25px
-  border-radius 25px
-  font-size 12px
-  font-weight bold
-  padding 5px 10px 5px 10px
-  margin 15px 5px 0 0
-  text-shadow 1px 1px 0px #ffffff
-  float right
-
-.more-link a:hover, a.more-link:hover, .more-link a:visited:hover, a.more-link:visited:hover
-  background-position 0 -35px
-  text-decoration none
-  border 2px solid #dddddd
 
 #footer .one_quarter_last
   float left

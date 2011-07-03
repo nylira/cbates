@@ -1,81 +1,72 @@
 #comments
-  border-top: 1px solid #e2e2e2
+  ul#commentlist
+    mb 4em !important
+    li
+      clearfix()
+      w 100%
+      position relative
 
-ul#commentlist
-  margin: 0
-  padding: 0
+      &:nth-of-type(odd)
+        bg w5
 
-ul#commentlist li
-  min-height: 125px
-  width: 550px
-  padding: 10px 0 10px 0
+      .singlecomment, .singlecomment-admin
+        float left
+        w 160px
+        p 1.5em 0 1.5em 1.5em
+        box-sizing border-box
 
-ul#commentlist li.alt
-  background: #ffffff
-  border-top: 1px solid #e2e2e2
-  margin: 0
+        p
+          va bottom
+          img 
+            float left
+            pr .5em
+            d block
+          img + br
+            d none
+          span.small
+            d block
+            float left
+            df()
+            s 13px
+      em
+        font italic 75%/1.5 sans
+        c #666
+        absolute top 1em right 1em
 
-ul#commentlist li.standard
-  background: #f9f9f9
-  border-top: 1px solid #e2e2e2
-  margin: 0
-
-.singlecomment, .singlecomment-admin
-  width: 75px
-  float: left
-  margin: 0 0 0 10px
-
-.singlecomment p span.small, .singlecomment-admin p span.small
-  font-size: 10px
-
-.commenttext, .commenttext-admin
-  width: 425px
-  float: left
+      .commenttext, .commenttext-admin
+        float left
+        w 480px
+        p 1.5em
+        box-sizing border-box
+        va top
 
 #commentsform
-  border-top: 1px solid #e2e2e2
-  float: left
-  padding: 10px 0 0 0
-
-#commentform input[type="text"]
-  width: 525px
-  color: #757575
-  font-family: "Droid Sans", Helvetica, Arial, sans-serif
-  font-size: 12px
-  border: 1px solid #e2e2e2
-  padding: 8px
-  margin: 10px 0 15px 0
-
-#commentform textarea
-  width: 525px
-  color: #757575
-  font-family: "Droid Sans", Helvetica, Arial, sans-serif
-  font-size: 12px
-  height: 150px
-  border: 1px solid #e2e2e2
-  padding: 8px
-  margin: 10px 0 15px 0
-
-#commentform h3#reply-title
-  font-size: 16px
-
-#commentform p.form-allowed-tags, #commentform p.form-allowed-tags code
-  font-size: 11px
+  mar 0 0 1.5em
+  p
+    position relative
+    clearfix()
+    mb 1em !important
+    &.form-allowed-tags
+      s 12px
+      ml 160px
+      va text-bottom
+      code
+        s 12px
+    &.form-submit
+      ml 160px
+  label
+    float left
+    width 160px
+  label + span
+    absolute top 0 left 160px - x
+    display block
+    w x
+  input, textarea
+    input()
+    float left
+    width 480px
+  textarea
+    h 10em
 
 #commentform input#submit
-  background-color: #353535
-  border-radius: 3px
-  -moz-border-radius: 3px
-  -webkit-border-radius: 3px
-  font-family: "Droid Sans", Helvetica, Arial, sans-serif
-  font-size: 12px
-  color: #ffffff
-  border: none
-  margin: 10px 0 0 0
-  padding: 5px 8px 5px 8px
-  float: right
-
-#commentform input#submit:hover
-  background-color: #757575
-  cursor: pointer
-
+  button()

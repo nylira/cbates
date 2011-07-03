@@ -11,6 +11,7 @@ link = #0ae
 hover = #fff
 
 a
+  vertical-align top
   color link
   td none
   &:hover, &:focus
@@ -36,9 +37,15 @@ body
     z-index 10
 
     h1
-      f bold 200%/1.5 sans
-      mb 1em
+      f 200%/1.5 sans
+      mb 1.5em
       font-smoothing()
+      c #fff
+      a
+        c #fff
+        &:hover
+          c link
+      
 
     #pageWrapper
       col 8
@@ -75,13 +82,12 @@ body
 
 
       p, ul, ol
-        m 0 0 1em
+        mb 1.5em
 
       ol li
         list-style decimal
 
       pre, code
-        p 0 0 0 15px
         ff monospace
         s 13px
 
@@ -93,6 +99,6 @@ body
 
       blockquote
         s 1.5em
-        m 5px 0 25px 25px
-        bl 5px solid #e1e1e1
-        p 0 0 0 5px
+        pl 1.5em
+        bl 5px solid w10
+        mb 1.5em
