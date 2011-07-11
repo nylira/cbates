@@ -6,23 +6,27 @@ p.alert
   mb 3em
 
   .package
-    w cw*4 - 1px
+    w cw*4 + x*2 - 1px
     display table-cell
-    bg m40
-    br 1px solid b30
-    p 1.5em 2em .5em
+    br 1px solid m40
+    p 0 2em
     box-sizing border-box
     va top
 
+    &:first-of-type
+      pl 0
+      w cw*4 - x
     &:last-of-type
+      pr 0
       br none
-      w cw*4
+      w cw*4 - x
 
     h2
       mb 0 !important
+      ff serif !important
 
     h3 
-      mb 1.5em
+      mb 2em !important
 
     strong
       display block

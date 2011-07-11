@@ -1,56 +1,55 @@
-#content
-  #pageWrapper
-    ul.posts
-      li.post
-        m 0 0 1px
-        &.excerpt a
-          display block
-          p 1.25em 1.75em
-          bg m40
-          transition()
-          h2
-            f 150%/1.1 sans
-            m 0 0 x*.5 !important
-            font-smoothing()
-          p
-            m 0 !important
-            &.time
-              c #666
-          &:hover
-            bg m46
-            bc link
+#contentWrapper
+  #content
+    #pageWrapper
 
-#pageWrapper
-  .post.single
-    pr 2em
+      ul.posts
+        li.post
+          &.excerpt a
+            display block
+            p 2em 0 0
+            transition()
+            h2
+              f 150%/1 serif
+              m 0 0 x*.3 !important
+              font-smoothing()
+            p
+              m 0 !important
+              s 85%
+              &.time
+                c #666
+            &:hover h2
+              c link
 
-    p
-      ff serif
-      &.time
-        c #666
-        m -3em 0 3em !important
+      .post.single
+        pr 4em
 
-    h1, h2, h3, h4, h5, h6
-      margin: 0 0 x*1.5
+        p
+          ff serif
+          &.time
+            c #666
+            m -3em 0 3em !important
 
-    img
-      max-width 100%
-      bg w10
-      p 10px
-      padding: 5px
-      m 0 10px 10px 0
+        h1, h2, h3, h4, h5, h6
+          margin: 0 0 x*1.5
 
-    body.ie img
-      max-width: 535px
-      max-height: 400px
+        img
+          max-width 100%
+          bg w10
+          p 10px
+          padding: 5px
+          m 0 10px 10px 0
 
-    a img:hover
-      opacity 0.75
-      cursor: url(img/zoom.cur)
+        body.ie img
+          max-width: 535px
+          max-height: 400px
 
-    img.attachment-post-thumbnail
-      max-width: 535px
-      max-height: 200px
+        a img:hover
+          opacity 0.75
+          cursor: url(img/zoom.cur)
 
-  #back
-    p x*3 0 x*4
+        img.attachment-post-thumbnail
+          max-width: 535px
+          max-height: 200px
+
+      #back
+        p x*3 0 x*4
