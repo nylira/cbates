@@ -8,7 +8,7 @@
 </h1>
 <ul>
   <li class="journal"><a href="<?php bloginfo('url'); ?>/journal/">Journal</a>
-  <li class="portfolio"><a href="<?php bloginfo('url'); ?>/portfolio/">Portfolio</a>
+  <li class="portfolio"><a href="<?php bloginfo('url'); ?>/portfolio/weddings/shuyang-felix/">Portfolio</a>
 </ul>
 
 </div>
