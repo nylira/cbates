@@ -1,16 +1,47 @@
-#home_custom
-  position relative
+#contentWrapper
+  #content
+    #home_custom
+      position relative
+      mt -64px
 
-  ul
-    li
-      col 4
-      mr 1px
-      a
-        display block
-        h 160px
-        bg m40
-        c #fff
-        p 1.5em 2em
-        cursor pointer
-        &:hover
-          c link
+      h1.logo
+        ta center
+        s 1.5em
+        lh x*1.20
+        c #888 !important
+        tt uppercase
+        ls 2px
+        m 0 0 4em
+
+        span.name
+          c #fff
+          display block
+
+      ul
+        m 0 70px
+        li
+          float left
+          a
+            display block
+            w 360px
+            p 10px
+            b 5px solid m40
+            position relative
+            &:hover
+              bc link
+              span
+                c link
+            img
+              display block
+
+            span
+              text-align center
+              display block
+              absolute bottom -3em left 0
+              w 360px
+              s .85em
+              c txt
+              tt uppercase
+              ls 3px
+          &.portfolio
+            mr 40px

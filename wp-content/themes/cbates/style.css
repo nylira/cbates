@@ -40,10 +40,17 @@ body.fs{overflow:hidden}
 #contentWrapper #content #pageWrapper sup{bottom:1ex}
 #contentWrapper #content #pageWrapper sub{top:.5ex}
 #contentWrapper #content #pageWrapper blockquote{font-size:1.5em;padding-left:1.5em;border-left:5px solid rgba(255,255,255,0.1);margin-bottom:1.5em}
-#home_custom{position:relative;}
-#home_custom ul li{width:320px;float:left;-webkit-box-sizing:;-moz-box-sizing:;box-sizing:;margin-right:1px;}
-#home_custom ul li a{display:block;height:160px;background:#282828;color:#fff;padding:1.5em 2em;cursor:pointer;}
-#home_custom ul li a:hover{color:#0ae}
+#contentWrapper #content #home_custom{position:relative;margin-top:-64px;}
+#contentWrapper #content #home_custom h1.logo{text-align:center;font-size:1.5em;line-height:19.2px;color:#888 !important;text-transform:uppercase;letter-spacing:2px;margin:0 0 4em;}
+#contentWrapper #content #home_custom h1.logo span.name{color:#fff;display:block}
+#contentWrapper #content #home_custom ul{margin:0 70px;}
+#contentWrapper #content #home_custom ul li{float:left;}
+#contentWrapper #content #home_custom ul li a{display:block;width:360px;padding:10px;border:5px solid #282828;position:relative;}
+#contentWrapper #content #home_custom ul li a:hover{border-color:#0ae;}
+#contentWrapper #content #home_custom ul li a:hover span{color:#0ae}
+#contentWrapper #content #home_custom ul li a img{display:block}
+#contentWrapper #content #home_custom ul li a span{text-align:center;display:block;position:absolute;bottom:-3em;left:0;width:360px;font-size:.85em;color:#ccc;text-transform:uppercase;letter-spacing:3px}
+#contentWrapper #content #home_custom ul li.portfolio{margin-right:40px}
 body.fs img.preview{position:absolute;left:0;top:0;width:100%}
 #imageWrapper{position:fixed;bottom:0;((null)):0;width:100%}
 #image_scroller{background:url("img/trans_bg.png");background:rgba(0,0,0,0.7);position:relative;overflow:hidden;}
@@ -61,7 +68,7 @@ body.fs img.preview{position:absolute;left:0;top:0;width:100%}
 #toggle{width:50px;height:50px;line-height:50px;background:#000 url("img/toggle.png") no-repeat center center;text-align:center;letter-spacing:1px;position:fixed;position:fixed;bottom:25px;left:50%;margin-left:-25px;cursor:pointer;opacity:.7;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);text-indent:-9999px;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;}
 #toggle:hover{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100)}
 p.alert{position:absolute;top:.5em;right:0}
-.packages{width:960px;margin-bottom:3em;}
+.packages{width:960px;margin:3em 0;}
 .packages .package{width:351px;display:table-cell;border-right:1px solid #282828;padding:0 2em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;vertical-align:top;}
 .packages .package:first-of-type{padding-left:0;width:304px}
 .packages .package:last-of-type{padding-right:0;border-right:none;width:304px}
