@@ -3,8 +3,8 @@ Contributors: wordpressdotorg
 Donate link: 
 Tags: importer, wordpress
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 0.4
+Tested up to: 3.2.1
+Stable tag: 0.5
 
 Import posts, pages, comments, custom fields, categories, tags and more from a WordPress export file.
 
@@ -37,6 +37,10 @@ If you would prefer to do things manually then follow these instructions:
 
 == Changelog ==
 
+= 0.5 =
+* Import comment meta (requires export from WordPress 3.2)
+* Minor bugfixes and enhancements
+
 = 0.4 =
 * Map comment user_id where possible
 * Import attachments from `wp:attachment_url`
@@ -52,6 +56,9 @@ If you would prefer to do things manually then follow these instructions:
 * Initial release
 
 == Upgrade Notice ==
+
+= 0.5 =
+Import comment meta and other minor bugfixes and enhancements.
 
 = 0.4 =
 Bug fixes for attachment importing and other small enhancements.

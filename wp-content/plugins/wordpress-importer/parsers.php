@@ -173,11 +173,21 @@ class WXR_Parser_SimpleXML {
 			foreach ( $wp->postmeta as $meta ) {
 				$post['postmeta'][] = array(
 					'key' => (string) $meta->meta_key,
-					'value' => (string) $meta->meta_value,
+					'value' => (string) $meta->meta_value
 				);
 			}
 
 			foreach ( $wp->comment as $comment ) {
+				$meta = array();
+				if ( isset( $comment->commentmeta ) ) {
+					foreach ( $comment->commentmeta as $m ) {
+						$meta[] = array(
+							'key' => (string) $m->meta_key,
+							'value' => (string) $m->meta_value
+						);
+					}
+				}
+			
 				$post['comments'][] = array(
 					'comment_id' => (int) $comment->comment_id,
 					'comment_author' => (string) $comment->comment_author,
@@ -191,6 +201,7 @@ class WXR_Parser_SimpleXML {
 					'comment_type' => (string) $comment->comment_type,
 					'comment_parent' => (string) $comment->comment_parent,
 					'comment_user_id' => (int) $comment->comment_user_id,
+					'commentmeta' => $meta,
 				);
 			}
 
@@ -302,9 +313,16 @@ class WXR_Parser_XML {
 	function tag_close( $parser, $tag ) {
 		switch ( $tag ) {
 			case 'wp:comment':
+				unset( $this->sub_data['key'], $this->sub_data['value'] ); // remove meta sub_data
 				if ( ! empty( $this->sub_data ) )
 					$this->data['comments'][] = $this->sub_data;
 				$this->sub_data = false;
+				break;
+			case 'wp:commentmeta':
+				$this->sub_data['commentmeta'][] = array(
+					'key' => $this->sub_data['key'],
+					'value' => $this->sub_data['value']
+				);
 				break;
 			case 'category':
 				if ( ! empty( $this->sub_data ) ) {
@@ -546,6 +564,16 @@ class WXR_Parser_Regex {
 		$comments = $comments[1];
 		if ( $comments ) {
 			foreach ( $comments as $comment ) {
+				preg_match_all( '|<wp:commentmeta>(.+?)</wp:commentmeta>|is', $comment, $commentmeta );
+				$commentmeta = $commentmeta[1];
+				$c_meta = array();
+				foreach ( $commentmeta as $m ) {
+					$c_meta[] = array(
+						'key' => $this->get_tag( $m, 'wp:meta_key' ),
+						'value' => $this->get_tag( $m, 'wp:meta_value' ),
+					);
+				}
+
 				$post_comments[] = array(
 					'comment_id' => $this->get_tag( $comment, 'wp:comment_id' ),
 					'comment_author' => $this->get_tag( $comment, 'wp:comment_author' ),
@@ -559,6 +587,7 @@ class WXR_Parser_Regex {
 					'comment_type' => $this->get_tag( $comment, 'wp:comment_type' ),
 					'comment_parent' => $this->get_tag( $comment, 'wp:comment_parent' ),
 					'comment_user_id' => $this->get_tag( $comment, 'wp:comment_user_id' ),
+					'commentmeta' => $c_meta,
 				);
 			}
 		}

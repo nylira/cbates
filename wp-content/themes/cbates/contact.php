@@ -24,6 +24,7 @@ Template Name: Contact
     </ul>
   </form>
 
+
 	<?php endwhile; else: ?>
 		<p>
 			<?php _e('Sorry, nothing matches that criteria.', 'specere'); ?>
@@ -31,5 +32,9 @@ Template Name: Contact
 	<?php endif; ?>
 
 	</div>
+
+  <div class="champagne">
+  <img src="<?php bloginfo('template_directory'); ?>/img/champagne.jpg">
+  </div>
 	
 <?php get_footer(); ?>

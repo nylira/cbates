@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/extend/plugins/wordpress-importer/
 Description: Import posts, pages, comments, custom fields, categories, tags and more from a WordPress export file.
 Author: wordpressdotorg
 Author URI: http://wordpress.org/
-Version: 0.4
+Version: 0.5
 Text Domain: wordpress-importer
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -335,6 +335,8 @@ class WP_Import extends WP_Importer {
 		$create_users = $this->allow_create_users();
 
 		foreach ( (array) $_POST['imported_authors'] as $i => $old_login ) {
+			// Multsite adds strtolower to sanitize_user. Need to sanitize here to stop breakage in process_posts.
+			$santized_old_login = sanitize_user( $old_login, true );
 			$old_id = isset( $this->authors[$old_login]['author_id'] ) ? intval($this->authors[$old_login]['author_id']) : false;
 
 			if ( ! empty( $_POST['user_map'][$i] ) ) {
@@ -342,7 +344,7 @@ class WP_Import extends WP_Importer {
 				if ( isset( $user->ID ) ) {
 					if ( $old_id )
 						$this->processed_authors[$old_id] = $user->ID;
-					$this->author_mapping[$old_login] = $user->ID;
+					$this->author_mapping[$santized_old_login] = $user->ID;
 				}
 			} else if ( $create_users ) {
 				if ( ! empty($_POST['user_new'][$i]) ) {
@@ -362,7 +364,7 @@ class WP_Import extends WP_Importer {
 				if ( ! is_wp_error( $user_id ) ) {
 					if ( $old_id )
 						$this->processed_authors[$old_id] = $user_id;
-					$this->author_mapping[$old_login] = $user_id;
+					$this->author_mapping[$santized_old_login] = $user_id;
 				} else {
 					printf( __( 'Failed to create new user for %s. Their posts will be attributed to the current user.', 'wordpress-importer' ), esc_html($this->authors[$old_login]['author_display_name']) );
 					if ( defined('IMPORT_DEBUG') && IMPORT_DEBUG )
@@ -372,10 +374,10 @@ class WP_Import extends WP_Importer {
 			}
 
 			// failsafe: if the user_id was invalid, default to the current user
-			if ( ! isset( $this->author_mapping[$old_login] ) ) {
+			if ( ! isset( $this->author_mapping[$santized_old_login] ) ) {
 				if ( $old_id )
 					$this->processed_authors[$old_id] = (int) get_current_user_id();
-				$this->author_mapping[$old_login] = (int) get_current_user_id();
+				$this->author_mapping[$santized_old_login] = (int) get_current_user_id();
 			}
 		}
 	}
@@ -523,7 +525,7 @@ class WP_Import extends WP_Importer {
 				continue;
 			}
 
-			if ( isset( $this->processed_posts[$post['post_id']] ) )
+			if ( isset( $this->processed_posts[$post['post_id']] ) && ! empty( $post['post_id'] ) )
 				continue;
 
 			if ( $post['status'] == 'auto-draft' )
@@ -654,6 +656,7 @@ class WP_Import extends WP_Importer {
 					$newcomments[$comment_id]['comment_approved']     = $comment['comment_approved'];
 					$newcomments[$comment_id]['comment_type']         = $comment['comment_type'];
 					$newcomments[$comment_id]['comment_parent'] 	  = $comment['comment_parent'];
+					$newcomments[$comment_id]['commentmeta']          = isset( $comment['commentmeta'] ) ? $comment['commentmeta'] : array();
 					if ( isset( $this->processed_authors[$comment['comment_user_id']] ) )
 						$newcomments[$comment_id]['user_id'] = $this->processed_authors[$comment['comment_user_id']];
 				}
@@ -666,6 +669,12 @@ class WP_Import extends WP_Importer {
 							$comment['comment_parent'] = $inserted_comments[$comment['comment_parent']];
 						$comment = wp_filter_comment( $comment );
 						$inserted_comments[$key] = wp_insert_comment( $comment );
+
+						foreach( $comment['commentmeta'] as $meta ) {
+							$value = maybe_unserialize( $meta['value'] );
+							add_comment_meta( $inserted_comments[$key], $meta['key'], $value );
+						}
+
 						$num_comments++;
 					}
 				}
@@ -1005,7 +1014,7 @@ class WP_Import extends WP_Importer {
 	function greet() {
 		echo '<div class="narrow">';
 		echo '<p>'.__( 'Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site.', 'wordpress-importer' ).'</p>';
-		echo '<p>'.__( 'Choose a WXR file to upload, then click Upload file and import.', 'wordpress-importer' ).'</p>';
+		echo '<p>'.__( 'Choose a WXR (.xml) file to upload, then click Upload file and import.', 'wordpress-importer' ).'</p>';
 		wp_import_upload_form( 'admin.php?import=wordpress&amp;step=1' );
 		echo '</div>';
 	}
