@@ -1,14 +1,12 @@
-<?php /* Template Name: Home */ ?>
+<?php /* Template Name: Landing */ ?>
 
 <?php get_header(); ?>
-<div id="home_custom">
-<h1 class="logo">
-  <span class="name">Cooper Bates</span>
-  <span class="subheading">Photography</span>
-</h1>
+
+<div id="landing">
+
 <ul>
   <li class="portfolio">
-    <a href="<?php bloginfo('url'); ?>/portfolio/weddings/shuyang-felix/">
+    <a href="<?php bloginfo('url'); ?>/home/">
       <img src="<?php bloginfo('template_directory'); ?>/img/couple.jpg">
       <span>Portfolio</span>
     </a>
@@ -20,3 +18,5 @@
 </ul>
 
 </div>
+
+<?php get_footer(); ?>

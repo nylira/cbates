@@ -15,7 +15,7 @@
     </a>
 
 		<?php if(function_exists('wp_nav_menu')){ ?>
-      <?php wp_nav_menu(array( 'sort_column' => 'menu_order', 'container_class' => 'nav', 'theme_location' => 'primary_menu' )); ?>
+      <?php wp_nav_menu(array( 'sort_column' => 'menu_order', 'container_class' => 'nav', 'theme_location' => 'primary_menu', 'exclude' => '1208' )); ?>
 		<?php } else { ?>
       <ul><?php wp_list_pages('sort_column=menu_order&title_li='); ?></ul>
 		<?php } ?>
