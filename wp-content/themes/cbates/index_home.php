@@ -8,6 +8,7 @@
     <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/events.jpg">
     <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/film.jpg">
     <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/film2.jpg">
+    <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/lzdeadii.jpg">
     <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/wedding.jpg">
     <li class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slides/music.jpg">
   </ul>

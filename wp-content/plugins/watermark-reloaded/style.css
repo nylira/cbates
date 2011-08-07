@@ -1,0 +1,48 @@
+#watermark_position td {
+	border: 1px solid #DFDFDF;	
+}
+
+select[name="watermark_text[font]"] option {
+	font-size: 14pt;
+}
+
+fieldset.wr_width, .wr_width {
+	width: 260px;
+}
+
+td.wr_width {
+	width: 360px;	
+}
+
+.wr_width [name="watermark_text[value]"], .wr_width [name="watermark_text[font]"] {
+	width: 100%;	
+}
+
+.wr_width [name="watermark_text[color]"] {
+	width: 55px;	
+}
+
+.wr_right {
+	width: none;
+	text-align: right;
+}
+
+.form-table, .form-table th.nowidth {
+	width: auto;	
+}
+
+/* color selector style */
+.colorSelector {
+	left:70px;
+	top: -26px;
+	width: 36px;
+	height: 36px;
+	position:relative;
+}
+
+.colorSelector div {
+	width: 28px;
+	height: 28px;
+	position: relative;
+	background: url(jQueryPlugins/colorpicker/images/select2.png) no-repeat scroll center center;
+}
